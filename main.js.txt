@@ -1,39 +1,121 @@
-// Sticky nav background on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('navbar');
-  nav.classList.toggle('scrolled', window.scrollY > 50);
+// ---------- particles ----------
+tsParticles.load("tsparticles", {
+  fpsLimit: 60,
+  particles: {
+    number: { value: 60 },
+    links: { enable: true, distance: 140 },
+    move: { enable: true, speed: 1 },
+    size: { value: 3 },
+    color: { value: "#00bcd4" }
+  },
+  interactivity: {
+    events: { onhover: { enable: true, mode: "repulse" } }
+  }
 });
 
-// Active nav link highlighting
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-link');
+// ---------- typing hero ----------
+const text = "Senior Python/Django Developer | Full-Stack & Business Executive";
+let i = 0;
+const typewriter = () => {
+  if (i < text.length) {
+    document.getElementById("typewriter").textContent += text.charAt(i);
+    i++;
+    setTimeout(typewriter, 40);
+  }
+};
+typewriter();
 
-window.addEventListener('scroll', () => {
-  let current = '';
+// ---------- mobile nav ----------
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-links");
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  hamburger.classList.toggle("open");
+});
+
+// ---------- active nav link ----------
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+window.addEventListener("scroll", () => {
+  let current = "";
   sections.forEach(sec => {
     const secTop = sec.offsetTop - 80;
-    if (scrollY >= secTop) current = sec.getAttribute('id');
+    if (scrollY >= secTop) current = sec.getAttribute("id");
   });
-  navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-  });
+  navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${current}`));
 });
 
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('show');
-  hamburger.classList.toggle('open');
+// ---------- summary counters ----------
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const card = entry.target;
+      const target = +card.dataset.count;
+      const counter = card.querySelector(".counter");
+      let val = 0;
+      const timer = setInterval(() => {
+        counter.textContent = val;
+        if (val === target) clearInterval(timer);
+        val++;
+      }, 40);
+      counterObserver.unobserve(card);
+    }
+  });
+});
+document.querySelectorAll(".glass-card").forEach(c => counterObserver.observe(c));
+
+// ---------- skill wheels ----------
+document.querySelectorAll(".wheel").forEach(wheel => {
+  const percent = +wheel.dataset.percent;
+  const label = wheel.dataset.skill;
+  const canvas = document.createElement("canvas");
+  canvas.width = 120;
+  canvas.height = 120;
+  wheel.appendChild(canvas);
+  const ctx = canvas.getContext("2d");
+  const angle = (Math.PI * 2 * percent) / 100;
+  const draw = to => {
+    ctx.clearRect(0, 0, 120, 120);
+    ctx.beginPath();
+    ctx.arc(60, 60, 50, 0, Math.PI * 2);
+    ctx.strokeStyle = "#e0e0e0";
+    ctx.lineWidth = 8;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(60, 60, 50, 0, to);
+    ctx.strokeStyle = "#00bcd4";
+    ctx.lineWidth = 8;
+    ctx.stroke();
+  };
+  let current = 0;
+  const timer = setInterval(() => {
+    draw(current);
+    if (current >= angle) clearInterval(timer);
+    current += 0.05;
+  }, 15);
+  const span = document.createElement("span");
+  span.textContent = label;
+  wheel.appendChild(span);
 });
 
-// Experience card accordion
-document.querySelectorAll('.exp-header').forEach(header => {
-  header.addEventListener('click', () => {
+// ---------- dark-mode toggle ----------
+const toggle = document.querySelector(".toggle-dark");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.querySelector("i").classList.toggle("fa-moon");
+  toggle.querySelector("i").classList.toggle("fa-sun");
+});
+if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  document.body.classList.add("dark");
+}
+
+// ---------- experience accordion ----------
+document.querySelectorAll(".exp-header").forEach(header => {
+  header.addEventListener("click", () => {
     const body = header.nextElementSibling;
-    const icon = header.querySelector('.toggle-btn i');
-    body.classList.toggle('open');
-    icon.classList.toggle('fa-chevron-down');
-    icon.classList.toggle('fa-chevron-up');
+    const icon = header.querySelector(".toggle-btn i");
+    body.classList.toggle("open");
+    icon.classList.toggle("fa-chevron-down");
+    icon.classList.toggle("fa-chevron-up");
   });
 });
