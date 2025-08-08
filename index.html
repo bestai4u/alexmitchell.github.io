@@ -3,70 +3,267 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alex Mitchell | Python Architect</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="icon" href="assets/favicon.ico"/>
+  <meta name="description" content="Alex Mitchell – Senior Python/Django & Full-Stack Developer, Business Development Executive based in Wyoming, USA"/>
+  <meta name="keywords" content="Python, Django, React, AWS, Full-Stack, Alex Mitchell"/>
+  <title>Alex Mitchell – Developer & Business Executive</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
-  <style>
-    body::before{
-      content:'';
-      position:fixed;
-      inset:0;
-      z-index:-3;
-      background-image:
-        radial-gradient(circle at 20% 80%,#8a2be2 0%,transparent 50%),
-        radial-gradient(circle at 80% 20%,#00f2fe 0%,transparent 50%),
-        radial-gradient(circle at 40% 40%,#ff00ff 0%,transparent 50%);
-      animation:float 20s ease-in-out infinite;
-    }
-    @keyframes float{
-      0%{transform:translate(0,0) rotate(0deg);}
-      50%{transform:translate(-20px,-20px) rotate(180deg);}
-      100%{transform:translate(0,0) rotate(360deg);}
-    }
-  </style>
+  <!-- Font-Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-  <section id="hero">
-    <img class="avatar" src="assets/avatar.jpg" alt="Alex"/>
+
+<!-- ---------- Header / Nav ---------- -->
+<header id="navbar">
+  <div class="container header-inner">
     <h1>Alex Mitchell</h1>
-    <p class="tagline">Senior Python Engineer • 12+ years • Cloud-Native • Open-source Contributor</p>
-    <a href="#projects" class="cta">Explore My Work</a>
-  </section>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#summary" class="nav-link">Summary</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="assets/Alex_Mitchell_Resume.pdf" download class="btn-download">Download CV</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </div>
+</header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I architect scalable Python systems for high-traffic fintech & health-tech platforms.<br/>Expert in Django, FastAPI, AsyncIO, AWS, Kubernetes & Terraform.</p>
-  </section>
+<!-- ---------- Hero ---------- -->
+<section class="hero">
+  <div class="container hero-inner">
+    <h2>Senior Python/Django Developer<br/>Full-Stack & Business Development Executive</h2>
+    <p class="tagline">Building scalable enterprise solutions while driving business growth.</p>
+  </div>
+</section>
 
-  <section id="projects">
-    <h2>Featured Projects</h2>
+<!-- ---------- Summary ---------- -->
+<section id="summary" class="section">
+  <div class="container">
+    <h2 class="section-title">Summary Highlights</h2>
     <div class="grid">
-      <div class="card"><h3>PyFin-Engine</h3><p>Real-time algorithmic trading engine handling 2M ticks/sec.</p></div>
-      <div class="card"><h3>Health-API</h3><p>HIPAA-compliant micro-services powering 25 hospitals.</p></div>
-      <div class="card"><h3>Async-Worker</h3><p>Lightweight distributed task queue – 2k GitHub stars.</p></div>
+      <!-- 40 fast facts -->
+      <div class="card">8+ years of Python & Django development</div>
+      <div class="card">Led 5 cross-functional product squads</div>
+      <div class="card">Reduced API latency by 42 %</div>
+      <div class="card">Deployed micro-services on AWS ECS & Lambda</div>
+      <div class="card">Built 3 SaaS platforms from 0 → 1</div>
+      <div class="card">Scaled PostgreSQL to 100M+ rows</div>
+      <div class="card">CI/CD via GitHub Actions & Docker</div>
+      <div class="card">Integrated Stripe, Plaid & Twilio APIs</div>
+      <div class="card">Implemented OAuth2 / JWT security</div>
+      <div class="card">Agile Scrum certified Product Owner</div>
+
+      <div class="card">React front-end with SSR/Next.js</div>
+      <div class="card">GraphQL & RESTful API design</div>
+      <div class="card">Reduced server costs 35 % via spot instances</div>
+      <div class="card">Unit & integration tests > 85 % coverage</div>
+      <div class="card">Elasticsearch for real-time search</div>
+      <div class="card">Celery + Redis background tasks</div>
+      <div class="card">Terraform & CloudFormation IaC</div>
+      <div class="card">Automated code quality via pre-commit hooks</div>
+      <div class="card">Dockerized dev environments</div>
+      <div class="card">Mentored 12 junior developers</div>
+
+      <div class="card">Built analytics dashboards with D3.js</div>
+      <div class="card">Handled PCI-DSS compliance</div>
+      <div class="card">Integrated ERP & CRM systems</div>
+      <div class="card">Managed $1.2 M technology budgets</div>
+      <div class="card">Negotiated vendor contracts</div>
+      <div class="card">Launched 2 B2B marketplaces</div>
+      <div class="card">Increased customer retention 22 %</div>
+      <div class="card">Created pitch decks raising $4 M seed</div>
+      <div class="card">Spearheaded GDPR & CCPA compliance</div>
+
+      <div class="card">Implemented A/B testing pipelines</div>
+      <div class="card">Kubernetes cluster orchestration</div>
+      <div class="card">Real-time chat with WebSockets</div>
+      <div class="card">Mobile-responsive PWA</div>
+      <div class="card">Optimized Webpack bundle size 40 %</div>
+      <div class="card">Sentry & Datadog monitoring</div>
+      <div class="card">SOLID & clean-code advocate</div>
+      <div class="card">Authored internal tech blog</div>
+      <div class="card">Green Card holder – Wyoming, USA</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="skills">
-    <h2>Core Skills</h2>
-    <ul class="skills-list">
-      <li>Python 3.12</li><li>Django / FastAPI</li><li>AsyncIO</li>
-      <li>AWS CDK</li><li>Kubernetes</li><li>Terraform</li>
-      <li>PostgreSQL</li><li>Redis</li><li>Docker</li>
-    </ul>
-  </section>
+<!-- ---------- Experience ---------- -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
 
-  <section id="contact">
-    <h2>Let's Talk</h2>
-    <a href="mailto:alex@example.com" class="btn">alex@example.com</a>
-    <a href="https://github.com/alexmitchell" target="_blank" class="btn">GitHub</a>
-    <a href="https://linkedin.com/in/alexmitchell" target="_blank" class="btn">LinkedIn</a>
-  </section>
+    <!-- Project Card 1 -->
+    <div class="exp-card">
+      <div class="exp-header">
+        <h3>FinEdge SaaS Platform</h3>
+        <p class="meta">Client: FinEdge Inc.  •  Senior Full-Stack Developer  •  Jan 2021 – Present</p>
+        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+      </div>
+      <div class="exp-body">
+        <div class="resp">
+          <h4>Implementation</h4>
+          <ul>
+            <li>Architected multi-tenant Django + PostgreSQL backend.</li>
+            <li>Implemented CQRS & event sourcing for audit trails.</li>
+          </ul>
+        </div>
+        <div class="resp">
+          <h4>Developed</h4>
+          <ul>
+            <li>REST & GraphQL APIs serving 2 k req/s.</li>
+            <li>React dashboard with Recharts & Material-UI.</li>
+          </ul>
+        </div>
+        <div class="resp">
+          <h4>Designed</h4>
+          <ul>
+            <li>Micro-service container strategy using Docker & ECS.</li>
+            <li>Blue-green deployment pipeline via GitHub Actions.</li>
+          </ul>
+        </div>
+        <div class="resp">
+          <h4>Collaborated</h4>
+          <ul>
+            <li>Led 6 developers & 2 designers in 2-week sprints.</li>
+            <li>Partnered with product & compliance for PCI-DSS.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  <footer>&copy; <span id="year"></span> Alex Mitchell</footer>
+    <!-- Project Card 2 -->
+    <div class="exp-card">
+      <div class="exp-header">
+        <h3>MediConnect Marketplace</h3>
+        <p class="meta">Client: MediConnect LLC  •  Backend Lead  •  Jun 2018 – Dec 2020</p>
+        <button class="toggle-btn"><i class="fas fa-chevron-down"></i></button>
+      </div>
+      <div class="exp-body">
+        <div class="resp">
+          <h4>Implementation</h4>
+          <ul>
+            <li>Designed HIPAA-compliant data layer on AWS RDS.</li>
+          </ul>
+        </div>
+        <div class="resp">
+          <h4>Developed</h4>
+          <ul>
+            <li>Django REST API powering iOS & Android apps.</li>
+            <li>ElasticSearch for doctor & service search.</li>
+          </ul>
+        </div>
+        <div class="resp">
+          <h4>Designed</h4>
+          <ul>
+            <li>Role-based authorization with OAuth2 scopes.</li>
+          </ul>
+        </div>
+        <div class="resp">
+          <h4>Collaborated</h4>
+          <ul>
+            <li>Worked with healthcare advisors & legal for FDA rules.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  <script src="js/main.js"></script>
+  </div>
+</section>
+
+<!-- ---------- Education ---------- -->
+<section id="education" class="section">
+  <div class="container">
+    <h2 class="section-title">Education & Certifications</h2>
+    <div class="edu-grid">
+      <div class="badge">B.S. Computer Science – 1998</div>
+      <div class="badge">Advanced Python Programming</div>
+      <div class="badge">Django for Professionals</div>
+      <div class="badge">RESTful API Design</div>
+      <div class="badge">AWS Solutions Architect</div>
+      <div class="badge">Azure Fundamentals</div>
+      <div class="badge">Agile & Scrum Master</div>
+      <div class="badge">Clean Code Practitioner</div>
+      <div class="badge">Data Structures & Algorithms</div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Skills ---------- -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill" data-tooltip="Python">
+        <i class="fab fa-python"></i>
+      </div>
+      <div class="skill" data-tooltip="Django">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="skill" data-tooltip="Flask">
+        <i class="fas fa-flask"></i>
+      </div>
+      <div class="skill" data-tooltip="REST APIs">
+        <i class="fas fa-plug"></i>
+      </div>
+      <div class="skill" data-tooltip="Git">
+        <i class="fab fa-git-alt"></i>
+      </div>
+      <div class="skill" data-tooltip="GitHub">
+        <i class="fab fa-github"></i>
+      </div>
+      <div class="skill" data-tooltip="AWS">
+        <i class="fab fa-aws"></i>
+      </div>
+      <div class="skill" data-tooltip="SQL">
+        <i class="fas fa-database"></i>
+      </div>
+      <div class="skill" data-tooltip="JavaScript">
+        <i class="fab fa-js-square"></i>
+      </div>
+      <div class="skill" data-tooltip="React">
+        <i class="fab fa-react"></i>
+      </div>
+      <div class="skill" data-tooltip="HTML5">
+        <i class="fab fa-html5"></i>
+      </div>
+      <div class="skill" data-tooltip="CSS3">
+        <i class="fab fa-css3-alt"></i>
+      </div>
+      <div class="skill" data-tooltip="CI/CD">
+        <i class="fas fa-infinity"></i>
+      </div>
+      <div class="skill" data-tooltip="Agile">
+        <i class="fas fa-tasks"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Contact ---------- -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:alex.mitchell@example.com" class="contact-link"><i class="fas fa-envelope"></i> alex.mitchell@example.com</a>
+      <a href="tel:+13075551234" class="contact-link"><i class="fas fa-phone"></i> +1 (307) 555-1234</a>
+      <a href="https://linkedin.com/in/alex-mitchell-dev" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/alex-mitchell" target="_blank" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Alex Mitchell. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
