@@ -4,19 +4,21 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Alex Mitchell – Senior Python/Django & Full-Stack Developer, Business Development Executive based in Wyoming, USA"/>
-  <meta name="keywords" content="Python, Django, React, AWS, Full-Stack, Alex Mitchell"/>
   <title>Alex Mitchell – Developer & Business Executive</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <!-- Font-Awesome icons -->
+  <!-- Font-Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Glassmorphism -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glassmorphism-css@1.0.0/dist/glass.min.css"/>
 
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
+<main id="tsparticles"></main>
 
-<!-- ---------- Header / Nav ---------- -->
+<!-- ---------- Header ---------- -->
 <header id="navbar">
   <div class="container header-inner">
     <h1>Alex Mitchell</h1>
@@ -38,9 +40,10 @@
 
 <!-- ---------- Hero ---------- -->
 <section class="hero">
-  <div class="container hero-inner">
-    <h2>Senior Python/Django Developer<br/>Full-Stack & Business Development Executive</h2>
+  <div class="hero-inner">
+    <h2 id="typewriter"></h2>
     <p class="tagline">Building scalable enterprise solutions while driving business growth.</p>
+    <div class="toggle-dark"><i class="fas fa-moon"></i></div>
   </div>
 </section>
 
@@ -48,49 +51,15 @@
 <section id="summary" class="section">
   <div class="container">
     <h2 class="section-title">Summary Highlights</h2>
-    <div class="grid">
-      <!-- 40 fast facts -->
-      <div class="card">8+ years of Python & Django development</div>
-      <div class="card">Led 5 cross-functional product squads</div>
-      <div class="card">Reduced API latency by 42 %</div>
-      <div class="card">Deployed micro-services on AWS ECS & Lambda</div>
-      <div class="card">Built 3 SaaS platforms from 0 → 1</div>
-      <div class="card">Scaled PostgreSQL to 100M+ rows</div>
-      <div class="card">CI/CD via GitHub Actions & Docker</div>
-      <div class="card">Integrated Stripe, Plaid & Twilio APIs</div>
-      <div class="card">Implemented OAuth2 / JWT security</div>
-      <div class="card">Agile Scrum certified Product Owner</div>
-
-      <div class="card">React front-end with SSR/Next.js</div>
-      <div class="card">GraphQL & RESTful API design</div>
-      <div class="card">Reduced server costs 35 % via spot instances</div>
-      <div class="card">Unit & integration tests > 85 % coverage</div>
-      <div class="card">Elasticsearch for real-time search</div>
-      <div class="card">Celery + Redis background tasks</div>
-      <div class="card">Terraform & CloudFormation IaC</div>
-      <div class="card">Automated code quality via pre-commit hooks</div>
-      <div class="card">Dockerized dev environments</div>
-      <div class="card">Mentored 12 junior developers</div>
-
-      <div class="card">Built analytics dashboards with D3.js</div>
-      <div class="card">Handled PCI-DSS compliance</div>
-      <div class="card">Integrated ERP & CRM systems</div>
-      <div class="card">Managed $1.2 M technology budgets</div>
-      <div class="card">Negotiated vendor contracts</div>
-      <div class="card">Launched 2 B2B marketplaces</div>
-      <div class="card">Increased customer retention 22 %</div>
-      <div class="card">Created pitch decks raising $4 M seed</div>
-      <div class="card">Spearheaded GDPR & CCPA compliance</div>
-
-      <div class="card">Implemented A/B testing pipelines</div>
-      <div class="card">Kubernetes cluster orchestration</div>
-      <div class="card">Real-time chat with WebSockets</div>
-      <div class="card">Mobile-responsive PWA</div>
-      <div class="card">Optimized Webpack bundle size 40 %</div>
-      <div class="card">Sentry & Datadog monitoring</div>
-      <div class="card">SOLID & clean-code advocate</div>
-      <div class="card">Authored internal tech blog</div>
-      <div class="card">Green Card holder – Wyoming, USA</div>
+    <div class="glass-grid">
+      <div class="glass-card" data-count="8"><span class="counter">0</span>+ years Python & Django</div>
+      <div class="glass-card" data-count="5"><span class="counter">0</span> cross-functional teams led</div>
+      <div class="glass-card" data-count="42"><span class="counter">0</span>% API latency reduced</div>
+      <div class="glass-card" data-count="3"><span class="counter">0</span> SaaS platforms built</div>
+      <div class="glass-card" data-count="100"><span class="counter">0</span>M+ rows PostgreSQL</div>
+      <div class="glass-card" data-count="35"><span class="counter">0</span>% infra cost saved</div>
+      <div class="glass-card" data-count="12"><span class="counter">0</span> juniors mentored</div>
+      <div class="glass-card" data-count="4"><span class="counter">0</span>M USD seed raised</div>
     </div>
   </div>
 </section>
@@ -100,7 +69,6 @@
   <div class="container">
     <h2 class="section-title">Experience</h2>
 
-    <!-- Project Card 1 -->
     <div class="exp-card">
       <div class="exp-header">
         <h3>FinEdge SaaS Platform</h3>
@@ -110,36 +78,23 @@
       <div class="exp-body">
         <div class="resp">
           <h4>Implementation</h4>
-          <ul>
-            <li>Architected multi-tenant Django + PostgreSQL backend.</li>
-            <li>Implemented CQRS & event sourcing for audit trails.</li>
-          </ul>
+          <ul><li>Architected multi-tenant Django + PostgreSQL backend.</li></ul>
         </div>
         <div class="resp">
           <h4>Developed</h4>
-          <ul>
-            <li>REST & GraphQL APIs serving 2 k req/s.</li>
-            <li>React dashboard with Recharts & Material-UI.</li>
-          </ul>
+          <ul><li>REST & GraphQL APIs serving 2 k req/s.</li></ul>
         </div>
         <div class="resp">
           <h4>Designed</h4>
-          <ul>
-            <li>Micro-service container strategy using Docker & ECS.</li>
-            <li>Blue-green deployment pipeline via GitHub Actions.</li>
-          </ul>
+          <ul><li>Micro-service container strategy using Docker & ECS.</li></ul>
         </div>
         <div class="resp">
           <h4>Collaborated</h4>
-          <ul>
-            <li>Led 6 developers & 2 designers in 2-week sprints.</li>
-            <li>Partnered with product & compliance for PCI-DSS.</li>
-          </ul>
+          <ul><li>Led 6 developers in 2-week sprints.</li></ul>
         </div>
       </div>
     </div>
 
-    <!-- Project Card 2 -->
     <div class="exp-card">
       <div class="exp-header">
         <h3>MediConnect Marketplace</h3>
@@ -149,32 +104,22 @@
       <div class="exp-body">
         <div class="resp">
           <h4>Implementation</h4>
-          <ul>
-            <li>Designed HIPAA-compliant data layer on AWS RDS.</li>
-          </ul>
+          <ul><li>Designed HIPAA-compliant data layer on AWS RDS.</li></ul>
         </div>
         <div class="resp">
           <h4>Developed</h4>
-          <ul>
-            <li>Django REST API powering iOS & Android apps.</li>
-            <li>ElasticSearch for doctor & service search.</li>
-          </ul>
+          <ul><li>Django REST API powering iOS & Android apps.</li></ul>
         </div>
         <div class="resp">
           <h4>Designed</h4>
-          <ul>
-            <li>Role-based authorization with OAuth2 scopes.</li>
-          </ul>
+          <ul><li>Role-based authorization with OAuth2 scopes.</li></ul>
         </div>
         <div class="resp">
           <h4>Collaborated</h4>
-          <ul>
-            <li>Worked with healthcare advisors & legal for FDA rules.</li>
-          </ul>
+          <ul><li>Worked with healthcare advisors & legal for FDA rules.</li></ul>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -183,15 +128,15 @@
   <div class="container">
     <h2 class="section-title">Education & Certifications</h2>
     <div class="edu-grid">
-      <div class="badge">B.S. Computer Science – 1998</div>
-      <div class="badge">Advanced Python Programming</div>
-      <div class="badge">Django for Professionals</div>
-      <div class="badge">RESTful API Design</div>
-      <div class="badge">AWS Solutions Architect</div>
-      <div class="badge">Azure Fundamentals</div>
-      <div class="badge">Agile & Scrum Master</div>
-      <div class="badge">Clean Code Practitioner</div>
-      <div class="badge">Data Structures & Algorithms</div>
+      <span class="badge">B.S. Computer Science – 1998</span>
+      <span class="badge">Advanced Python Programming</span>
+      <span class="badge">Django for Professionals</span>
+      <span class="badge">RESTful API Design</span>
+      <span class="badge">AWS Solutions Architect</span>
+      <span class="badge">Azure Fundamentals</span>
+      <span class="badge">Agile & Scrum Master</span>
+      <span class="badge">Clean Code Practitioner</span>
+      <span class="badge">Data Structures & Algorithms</span>
     </div>
   </div>
 </section>
@@ -200,49 +145,13 @@
 <section id="skills" class="section">
   <div class="container">
     <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill" data-tooltip="Python">
-        <i class="fab fa-python"></i>
-      </div>
-      <div class="skill" data-tooltip="Django">
-        <i class="fas fa-code"></i>
-      </div>
-      <div class="skill" data-tooltip="Flask">
-        <i class="fas fa-flask"></i>
-      </div>
-      <div class="skill" data-tooltip="REST APIs">
-        <i class="fas fa-plug"></i>
-      </div>
-      <div class="skill" data-tooltip="Git">
-        <i class="fab fa-git-alt"></i>
-      </div>
-      <div class="skill" data-tooltip="GitHub">
-        <i class="fab fa-github"></i>
-      </div>
-      <div class="skill" data-tooltip="AWS">
-        <i class="fab fa-aws"></i>
-      </div>
-      <div class="skill" data-tooltip="SQL">
-        <i class="fas fa-database"></i>
-      </div>
-      <div class="skill" data-tooltip="JavaScript">
-        <i class="fab fa-js-square"></i>
-      </div>
-      <div class="skill" data-tooltip="React">
-        <i class="fab fa-react"></i>
-      </div>
-      <div class="skill" data-tooltip="HTML5">
-        <i class="fab fa-html5"></i>
-      </div>
-      <div class="skill" data-tooltip="CSS3">
-        <i class="fab fa-css3-alt"></i>
-      </div>
-      <div class="skill" data-tooltip="CI/CD">
-        <i class="fas fa-infinity"></i>
-      </div>
-      <div class="skill" data-tooltip="Agile">
-        <i class="fas fa-tasks"></i>
-      </div>
+    <div class="skill-wheels">
+      <div class="wheel" data-skill="Python" data-percent="95"></div>
+      <div class="wheel" data-skill="Django" data-percent="90"></div>
+      <div class="wheel" data-skill="Flask" data-percent="80"></div>
+      <div class="wheel" data-skill="React" data-percent="85"></div>
+      <div class="wheel" data-skill="AWS" data-percent="88"></div>
+      <div class="wheel" data-skill="PostgreSQL" data-percent="92"></div>
     </div>
   </div>
 </section>
@@ -264,6 +173,8 @@
   <p>&copy; 2024 Alex Mitchell. All rights reserved.</p>
 </footer>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
