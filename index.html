@@ -8,9 +8,26 @@
   <link rel="icon" href="assets/favicon.ico"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
   <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+  <style>
+    body::before{
+      content:'';
+      position:fixed;
+      inset:0;
+      z-index:-3;
+      background-image:
+        radial-gradient(circle at 20% 80%,#8a2be2 0%,transparent 50%),
+        radial-gradient(circle at 80% 20%,#00f2fe 0%,transparent 50%),
+        radial-gradient(circle at 40% 40%,#ff00ff 0%,transparent 50%);
+      animation:float 20s ease-in-out infinite;
+    }
+    @keyframes float{
+      0%{transform:translate(0,0) rotate(0deg);}
+      50%{transform:translate(-20px,-20px) rotate(180deg);}
+      100%{transform:translate(0,0) rotate(360deg);}
+    }
+  </style>
 </head>
 <body>
-  <!-- HERO -->
   <section id="hero">
     <img class="avatar" src="assets/avatar.jpg" alt="Alex"/>
     <h1>Alex Mitchell</h1>
@@ -18,16 +35,11 @@
     <a href="#projects" class="cta">Explore My Work</a>
   </section>
 
-  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I architect scalable Python systems for high-traffic fintech & health-tech platforms.<br/>
-      Expert in Django, FastAPI, AsyncIO, AWS, Kubernetes & Terraform.
-    </p>
+    <p>I architect scalable Python systems for high-traffic fintech & health-tech platforms.<br/>Expert in Django, FastAPI, AsyncIO, AWS, Kubernetes & Terraform.</p>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects">
     <h2>Featured Projects</h2>
     <div class="grid">
@@ -37,7 +49,6 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
     <h2>Core Skills</h2>
     <ul class="skills-list">
@@ -47,7 +58,6 @@
     </ul>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <h2>Let's Talk</h2>
     <a href="mailto:alex@example.com" class="btn">alex@example.com</a>
