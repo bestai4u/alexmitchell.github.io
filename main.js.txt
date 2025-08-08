@@ -1,5 +1,39 @@
-ScrollReveal().reveal('#hero h1',{delay:200,origin:'top',distance:'40px'});
-ScrollReveal().reveal('#hero .tagline',{delay:400,origin:'top',distance:'40px'});
-ScrollReveal().reveal('.card',{interval:150,origin:'bottom'});
-ScrollReveal().reveal('#skills li',{interval:80,origin:'left'});
-document.getElementById('year').textContent = new Date().getFullYear();
+// Sticky nav background on scroll
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Active nav link highlighting
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    const secTop = sec.offsetTop - 80;
+    if (scrollY >= secTop) current = sec.getAttribute('id');
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+  });
+});
+
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+  hamburger.classList.toggle('open');
+});
+
+// Experience card accordion
+document.querySelectorAll('.exp-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const body = header.nextElementSibling;
+    const icon = header.querySelector('.toggle-btn i');
+    body.classList.toggle('open');
+    icon.classList.toggle('fa-chevron-down');
+    icon.classList.toggle('fa-chevron-up');
+  });
+});
