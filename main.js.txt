@@ -1,0 +1,8 @@
+// ScrollReveal animations
+ScrollReveal().reveal('#hero h1',{delay:200,origin:'top',distance:'40px'});
+ScrollReveal().reveal('#hero .tagline',{delay:400,origin:'top',distance:'40px'});
+ScrollReveal().reveal('.card',{interval:150,origin:'bottom'});
+ScrollReveal().reveal('#skills li',{interval:80,origin:'left'});
+
+// Dynamic year
+document.getElementById('year').textContent = new Date().getFullYear();

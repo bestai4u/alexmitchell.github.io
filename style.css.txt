@@ -1,0 +1,26 @@
+/* RESET & BASE */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#eee;line-height:1.6}
+section{padding:100px 10%}
+h2{font-size:2.2rem;margin-bottom:30px;color:#00f2fe}
+p,li{font-size:1.1rem}
+
+/* HERO */
+#hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#0f0f0f 0%, #1a1a2e 100%);animation:gradient 10s ease infinite}
+.avatar{width:160px;height:160px;border-radius:50%;border:3px solid #00f2fe;margin-bottom:20px}
+.tagline{max-width:600px;margin:15px 0 40px;color:#ccc}
+.cta,.btn{background:linear-gradient(90deg,#00f2fe,#4facfe);padding:14px 32px;border:none;border-radius:30px;color:#111;font-weight:600;text-decoration:none;transition:.3s}
+.cta:hover,.btn:hover{transform:translateY(-3px) scale(1.05)}
+
+/* GRID */
+.grid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px;backdrop-filter:blur(12px);transition:.3s}
+.card:hover{transform:translateY(-8px) scale(1.03)}
+.skills-list{display:flex;flex-wrap:wrap;gap:15px}
+.skills-list li{background:rgba(255,255,255,.08);padding:8px 18px;border-radius:20px;font-size:1rem}
+
+/* FOOTER */
+footer{text-align:center;padding:30px;color:#666;font-size:.9rem}
+
+/* ANIMATIONS */
+@keyframes gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
